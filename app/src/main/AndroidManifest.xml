@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!--This gives us permissions that are required for certain functions -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Declares the use of the camera and flash -->
+    <uses-feature android:name="android.hardware.camera" android:required="false"/>
+    <uses-feature android:name="android.hardware.camera.flash" android:required="false"/>
+
+
+    <application
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.VerseVerwebt"
+        tools:targetApi="31"
+        tools:ignore="LockedOrientationActivity">
+
+
+        <activity
+            android:name=".ui.general.MainMenu"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.VerseVerwebt"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.chapters.ChapterIntro" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.chapters.Chapter1" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.chapters.Chapter2" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.chapters.Chapter3" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.chapters.Chapter4" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.chapters.Chapter5" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.chapters.Chapter6" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.chapters.Chapter7" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.general.TableOfContents" android:screenOrientation="portrait" android:resizeableActivity="true"/>
+        <activity android:name=".ui.user.Ranking" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.user.Login" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.user.SignUp" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.user.Profile" android:screenOrientation="portrait" android:resizeableActivity="true" />
+        <activity android:name=".ui.general.Credits" android:screenOrientation="portrait" android:resizeableActivity="true" />
+    </application>
+
+</manifest>
